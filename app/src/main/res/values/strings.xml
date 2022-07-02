@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BurtsevPR315Taxi</string>
+    <string name="_1">1</string>
+    <string name="ivanov_mail_com">ivanov@mail.com</string>
+    <string name="password">***************</string>
+    <string name="remember_my">Remember my</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="your_e_mail">your e-mail</string>
+    <string name="your_password">your password</string>
+    <string name="repeat_password">repeat password</string>
+    <string name="accept_term">I accept the terms of the agreement</string>
+    <string name="have_an_account">Have an account ?</string>
+    <string name="ivanov">Ivanov Ivan</string>
+    <string name="novosibirsk">Novosibirsk</string>
+    <string name="profile">Profile</string>
+    <string name="history">History</string>
+    <string name="settings">Settings</string>
+</resources>
