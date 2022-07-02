@@ -34,7 +34,7 @@
         android:layout_height="40dp"
         android:layout_marginHorizontal="35dp"
         android:layout_marginBottom="305dp"
-        android:background="@color/white"
+        android:background="@drawable/bg"
         android:drawableStart="@drawable/mail_outline"
         android:drawablePadding="29dp"
         android:hint="@string/ivanov_mail_com"
@@ -52,7 +52,7 @@
         android:layout_height="40dp"
         android:layout_marginHorizontal="35dp"
         android:layout_marginBottom="245dp"
-        android:background="@color/white"
+        android:background="@drawable/bg"
         android:drawableStart="@drawable/pass"
         android:drawablePadding="29dp"
         android:hint="@string/password"
@@ -62,6 +62,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:inputType="textPassword"
         tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
 
     <CheckBox

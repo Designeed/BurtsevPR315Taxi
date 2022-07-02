@@ -47,7 +47,7 @@
         android:layout_height="40dp"
         android:layout_marginHorizontal="35dp"
         android:layout_marginTop="28dp"
-        android:background="@color/white"
+        android:background="@drawable/bg"
         android:drawableStart="@drawable/mail_outline"
         android:drawablePadding="29dp"
         android:hint="@string/your_e_mail"
@@ -66,7 +66,7 @@
         android:layout_height="40dp"
         android:layout_marginHorizontal="35dp"
         android:layout_marginBottom="245dp"
-        android:background="@color/white"
+        android:background="@drawable/bg"
         android:drawableStart="@drawable/pass"
         android:drawablePadding="29dp"
         android:hint="@string/your_password"
@@ -76,6 +76,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        android:inputType="textPassword"
         tools:ignore="RtlSymmetry,TouchTargetSizeCheck,TextContrastCheck" />
 
     <androidx.appcompat.widget.AppCompatEditText
@@ -84,7 +85,7 @@
         android:layout_height="40dp"
         android:layout_marginHorizontal="35dp"
         android:layout_marginTop="20dp"
-        android:background="@color/white"
+        android:background="@drawable/bg"
         android:drawableStart="@drawable/pass"
         android:drawablePadding="29dp"
         android:hint="@string/repeat_password"
@@ -94,8 +95,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/your"
+        android:inputType="textPassword"
         tools:ignore="RtlSymmetry,TouchTargetSizeCheck,TextContrastCheck" />
-
 
     <CheckBox
         android:id="@+id/check"
@@ -125,7 +126,6 @@
         android:layout_height="59dp"
         android:layout_marginTop="32dp"
         android:text="@string/sign_in"
-        android:textColor="#546E7A"
         android:textStyle="bold"
         app:backgroundTint="#F6BC1A"
         android:textColorHint="#546E7A"

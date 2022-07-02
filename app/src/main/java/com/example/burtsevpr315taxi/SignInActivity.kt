@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import android.widget.Toast
 import com.example.burtsevpr315taxi.databinding.ActivitySignInBinding
 
@@ -13,16 +14,14 @@ class SignInActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
-
         binding = ActivitySignInBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         binding.buttonSignIn.setOnClickListener {
-            val login = binding.emailLogin.text ?: ""
-            val password = binding.passwordText.text ?: ""
+            val login = binding.emailLogin.text.toString()
+            val password = binding.passwordText.text.toString()
 
-            if (login.isBlank() || password.isBlank()) {
-                Log.d(TAG, "onCreate: asdf")
+            if (Validate().onBlank(login, password)) {
                 Toast.makeText(this, "Заполните поля", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
@@ -32,7 +31,7 @@ class SignInActivity : AppCompatActivity() {
         }
 
         binding.createNewAccount.setOnClickListener {
-            val int: Intent = Intent(this, SignUpActivity::class.java)
+            val int = Intent(this, SignUpActivity::class.java)
             this.startActivity(int)
         }
     }

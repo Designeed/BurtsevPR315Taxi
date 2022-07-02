@@ -13,17 +13,21 @@ class SignUpActivity : AppCompatActivity() {
     lateinit var binding: ActivitySignUpBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
+        binding = ActivitySignUpBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val btn = findViewById<Button>(R.id.button)
 
-        btn.setOnClickListener {
-            val login = binding.email.text ?: ""
-            val password = binding.your.text ?: ""
-            val password2 = binding.repeat.text ?: ""
+        binding.button.setOnClickListener {
+            val login = binding.email.text.toString()
+            val password = binding.your.text.toString()
+            val password2 = binding.repeat.text.toString()
 
-            if (login.isBlank() || password.isBlank() || password2.isBlank()) {
+            if (Validate().onBlank(login, password, password2)) {
                 Toast.makeText(this, "Заполните поля", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+            if (!Validate().emailAddress(login)){
+                Toast.makeText(this, "Неверный формат почты", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
